@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10sp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="12sp"
+                android:background="@color/colorAccent"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Product"
+                android:gravity="center_horizontal"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="name"/>
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="price"/>
+
+            <EditText
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="description" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:onClick="add_prod"
+                android:text="Submit" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="12sp"
+                android:background="@color/colorAccent"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Show Product"
+                android:gravity="center_horizontal"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+                <EditText
+                    android:id="@+id/id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter id"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Go"
+                    android:onClick="show_prod"/>
+            </LinearLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/showname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                android:textSize="18sp"/>
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/showprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product Price"
+                android:textSize="18sp"/>
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/showdesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product Description"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="12sp"
+                android:background="@color/colorAccent"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update Product Price"
+                android:gravity="center_horizontal"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/id_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter id"/>
+            <EditText
+                android:id="@+id/price_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter New Price"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upadte Price"
+                android:onClick="update_price"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="12sp"
+                android:background="@color/colorAccent"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Delete Product"
+                android:gravity="center_horizontal"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/id_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter id"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Delete Product"
+                android:onClick="delete_product"
+                android:layout_marginBottom="20sp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
